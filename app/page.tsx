@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const stats = [
-  { value: "12", label: "workshops per term" },
-  { value: "24", label: "hours of building" },
-  { value: "1", label: "shared hackathon club" },
+  { value: "10", label: "hackathons per year" },
+  { value: "1", label: "meeting per week" },
+  { value: "20+", label: "like-minded people" },
 ];
 
 const pillars = [
@@ -16,15 +16,15 @@ const pillars = [
 const roadmap = [
   {
     title: "Kickoff",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    text: "The first few weeks involve introducing ourselves, discussing hackathons, and forming teams. ",
   },
   {
     title: "Sprint sessions",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    text: "Every week, hackers will learn new skills, and note down ideas in Google Sheets",
   },
   {
-    title: "Demo day",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    title: "Hackathon days",
+    text: "Across the year, we will attend 10 hackathons together, providing numerous opporunities to learn, build, and win.",
   },
 ];
 
@@ -42,25 +42,16 @@ export default function Home() {
       <div className="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.16),transparent_65%)]" />
       <div className="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col px-6 py-6 sm:px-10 lg:px-12">
         <header className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
-          <div className="flex items-center gap-3">
-            <div className="relative h-11 w-11 overflow-hidden rounded-xl border border-white/10 bg-white/5">
-              <Image
-                src="/logo.png"
-                alt="Hackademies logo"
-                fill
-                priority
-                className="object-contain p-1.5"
-              />
-            </div>
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-slate-400">
-                Hackademies
-              </p>
-              <p className="text-sm text-slate-300">Hackathon club template</p>
-            </div>
-          </div>
+          {/* Make image around 200px x 200px */}
+          <Image
+            src="/logo.png"
+            alt="Hackademies logo"
+            className="h-16 w-16 rounded-full border border-white/10 bg-white/5 p-2 sm:h-20 sm:w-20"
+            width={200}
+            height={200}
+          />
           <a
-            href="#join"
+            href="https://forms.gle/mtzFw2yoVYfPp8aN8"
             className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-100 transition-colors hover:bg-white/10"
           >
             Join the club
@@ -69,34 +60,21 @@ export default function Home() {
 
         <section className="grid flex-1 items-center gap-10 py-12 lg:grid-cols-[1.1fr_0.9fr] lg:py-16">
           <div className="max-w-3xl space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.28em] text-slate-300">
-              <span className="h-2 w-2 rounded-full bg-sky-400" />
-              High school hackathon club
-            </div>
+
 
             <div className="space-y-5">
               <h1 className="max-w-2xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Build ideas.
-                <span className="block text-slate-400">Ship together.</span>
+                Hackademies
+                <span className="block text-slate-400">Build and Ship together.</span>
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Hackademies is a hackathon club for students who want to learn,
-                collaborate, and ship creative projects together.
+                Hackademies is a hackathon club in the Academies of Loudoun, made
+                for students who want to learn, collaborate, and ship creative
+                projects together.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              {pillars.map((pillar) => (
-                <span
-                  key={pillar}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200"
-                >
-                  {pillar}
-                </span>
-              ))}
-            </div>
+
 
             <div className="flex flex-wrap gap-4" id="join">
               <a
@@ -116,15 +94,14 @@ export default function Home() {
 
           <div className="grid gap-5">
             <div className="rounded-[1.75rem] border border-white/10 bg-[#0c1018] p-6 text-white shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
-              <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
-                Featured club note
-              </p>
+
               <p className="mt-4 text-2xl font-medium leading-tight text-slate-100">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Built by hackathon winners, for hackathon winners.
               </p>
               <p className="mt-4 text-sm leading-7 text-slate-400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Hackademies guarantees a safe and supportive environment for students of all skill
+                levels to learn, build, and pitch their ideas. Our club is designed to help students
+                use code to solve real-world problems.
               </p>
             </div>
 
@@ -143,17 +120,18 @@ export default function Home() {
         </section>
 
         <section className="grid gap-6 border-t border-white/10 py-12 lg:grid-cols-[0.95fr_1.05fr]" id="roadmap">
+
           <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-              What we do
+              WHAT WE DO
             </p>
             <h2 className="mt-4 text-3xl font-semibold text-white">
-              Lorem ipsum and hackathon club energy.
+              Connect coders and creators to build together.
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Hackademies is not just an ACL club—it is a community of
+              students who like to collaborate, stay up at night, and
+              <span className="font-semibold text-slate-100"> win</span>.
             </p>
           </div>
 
@@ -173,40 +151,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          className="rounded-[1.5rem] border border-white/10 bg-[#0b0f16] px-7 py-8 text-white"
-          id="tracks"
-        >
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-                Tracks
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-                Hackademies keeps the focus on real building.
-              </h2>
-              <p className="mt-4 text-base leading-7 text-slate-400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2 lg:min-w-[28rem]">
-              {tracks.map((track) => (
-                <div
-                  key={track}
-                  className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200"
-                >
-                  {track}
-                </div>
-              ))}
+        <section className="grid place-items-center gap-6 border-t border-white/10 py-12 lg:grid-cols-[1.05fr_0.95fr]" id="join">
+          <div className="mx-auto w-full max-w-2xl rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500"> JOIN US </p>
+            <h2 className="mt-4 text-3xl font-semibold text-white"> Join Hackademies and start building today. </h2>
+            <p className="mt-4 text-base leading-7 text-slate-400"> Hackademies is open to all students in the Academies of Loudoun. Whether you are a beginner or an experienced hacker, we welcome you to join our community and start building amazing projects together. </p>
+            <div className="flex items-center justify-center">
+              <a href="https://forms.gle/mtzFw2yoVYfPp8aN8" className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6 text-center text-lg font-semibold text-slate-100 transition-colors hover:bg-white/10"> Join the club </a>
             </div>
           </div>
         </section>
 
+
         <footer className="mt-10 border-t border-white/10 py-6 text-sm text-slate-500 sm:flex sm:items-center sm:justify-between">
-          <p>Hackademies | High school hackathon club</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Hackademies | Academies of Loudoun; Acskhat Tiwari. All rights reserved.</p>
+          <p>Contact: <a href="mailto:hackademies@gmail.com" className="text-slate-400 hover:text-slate-300">hackademies@gmail.com</a></p>
         </footer>
       </div>
     </main>
