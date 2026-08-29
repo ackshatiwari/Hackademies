@@ -6,7 +6,6 @@ const stats = [
   // TODO: add the ACL Hacks participant count to this label once confirmed
   // (e.g. "hackathon we ran, 300 participants"). Swap this tile for a concrete
   // membership number instead if we ever have one worth showing.
-  { value: "1", label: "hackathon we ran" },
 ];
 
 const pillars = [
