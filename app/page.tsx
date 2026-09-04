@@ -156,27 +156,27 @@ const faqs = [
     // TODO: replace [ROOM] with the actual meeting room number.
     question: "When and where do you meet?",
     answer:
-      "Mondays or Tuesdays, Room 2311. Check the club chat for this week's day.",
+      "Mondays or Tuesdays, Room 1202. Check the club chat for this week's day.",
   },
 ];
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-transparent text-slate-100">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(34,197,94,0.09)_1px,transparent_1px),linear-gradient(to_bottom,rgba(34,197,94,0.09)_1px,transparent_1px)] bg-[size:72px_72px] opacity-30" />
+    <main className="relative min-h-screen overflow-hidden bg-[#f4f1e8] text-[#2b2620]">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(91,33,182,0.09)_1px,transparent_1px),linear-gradient(to_bottom,rgba(91,33,182,0.09)_1px,transparent_1px)] bg-[size:72px_72px] opacity-30" />
       <div className="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col px-6 py-6 sm:px-10 lg:px-12">
-        <header className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
+        <header className="flex items-center justify-between gap-4 border-b border-[#2b2620]/15 pb-5">
           {/* Make image around 200px x 200px */}
           <Image
             src="/logo.png"
             alt="Hackademies logo"
-            className="h-16 w-16 rounded-full border border-white/10 bg-white/5 p-2 sm:h-20 sm:w-20"
+            className="h-16 w-16 rounded-full border border-[#2b2620]/15 bg-white/50 p-2 sm:h-20 sm:w-20"
             width={200}
             height={200}
           />
           <a
             href="https://forms.gle/mtzFw2yoVYfPp8aN8"
-            className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-100 transition-colors hover:bg-white/10"
+            className="rounded-[5px] bg-[#5b21b6] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#521ea4]"
           >
             Join the club
           </a>
@@ -187,11 +187,11 @@ export default function Home() {
 
 
             <div className="space-y-5">
-              <h1 className="max-w-2xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-2xl text-5xl font-semibold tracking-tight text-[#2b2620] sm:text-6xl lg:text-7xl">
                 Hackademies
-                <span className="block text-stone-200">Build and Ship together.</span>
+                <span className="block text-[#2b2620]/80">Build and Ship together.</span>
               </h1>
-              <p className="max-w-2xl text-lg leading-8 text-stone-300/70 sm:text-xl">
+              <p className="max-w-2xl text-lg leading-8 text-[#2b2620]/70 sm:text-xl">
                 Hackademies is a hackathon club in the Academies of Loudoun, made
                 for students who want to learn, collaborate, and ship creative
                 projects together.
@@ -203,13 +203,13 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-slate-200"
+                className="rounded-[5px] bg-[#5b21b6] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#521ea4]"
               >
                 See what we&apos;ve built
               </a>
               <a
                 href="https://forms.gle/mtzFw2yoVYfPp8aN8"
-                className="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition-colors hover:bg-white/10"
+                className="rounded-[5px] bg-[#5b21b6] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#521ea4]"
               >
                 Join the club
               </a>
@@ -217,12 +217,12 @@ export default function Home() {
           </div>
 
           <div className="grid gap-5">
-            <div className="rounded-[1.75rem] border border-emerald-500/20 bg-[linear-gradient(160deg,rgba(34,197,94,0.10),rgba(0,0,0,0.6))] p-6 text-white">
+            <div className="rounded-[1.75rem] border border-[#5b21b6]/20 bg-[#2b2620]/[.04] p-6 text-[#2b2620]">
 
-              <p className="mt-4 text-2xl font-medium leading-tight text-slate-100">
+              <p className="mt-4 text-2xl font-medium leading-tight text-[#2b2620]">
                 Built by hackathon winners, for all.
               </p>
-              <p className="mt-4 text-sm leading-7 text-stone-300/70">
+              <p className="mt-4 text-sm leading-7 text-[#2b2620]/70">
                 Come in at any skill level. You will learn, build, and pitch alongside people
                 doing the same thing, and you will leave with something you made that solves a
                 real problem.
@@ -233,27 +233,27 @@ export default function Home() {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-[1.25rem] border border-white/10 bg-white/5 p-5"
+                  className="rounded-[1.25rem] border border-[#2b2620]/15 bg-white/50 p-5"
                 >
-                  <p className="font-mono text-3xl font-semibold text-white">{stat.value}</p>
-                  <p className="mt-2 text-sm leading-6 text-stone-300/70">{stat.label}</p>
+                  <p className="font-mono text-3xl font-semibold text-[#2b2620]">{stat.value}</p>
+                  <p className="mt-2 text-sm leading-6 text-[#2b2620]/70">{stat.label}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-12" id="projects">
+        <section className="border-t border-[#2b2620]/15 py-12" id="projects">
           <h2 className="sr-only">Projects from our members</h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project) => (
               <article
                 key={project.title}
-                className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03]"
+                className="overflow-hidden rounded-[1.5rem] border border-[#2b2620]/15 bg-white/50"
               >
                 {/* TODO: swap in higher-resolution project screenshots when we have them */}
-                <div className="relative aspect-[16/10] w-full border-b border-white/10 bg-black/40">
+                <div className="relative aspect-[16/10] w-full border-b border-[#2b2620]/15 bg-[#2b2620]/10">
                   <Image
                     src={project.image}
                     alt={`${project.title} project screenshot`}
@@ -263,45 +263,45 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <p className="inline-flex flex-wrap items-baseline gap-x-1.5 gap-y-1 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-stone-300/70">
+                  <p className="inline-flex flex-wrap items-baseline gap-x-1.5 gap-y-1 rounded-full border border-[#2b2620]/15 bg-white/50 px-3 py-1.5 text-xs font-medium text-[#2b2620]/70">
                     <span>{project.badge}</span>
                     {project.badgeAccent ? (
-                      <span className="text-sm font-semibold text-emerald-400">
+                      <span className="text-sm font-semibold text-[#5b21b6]">
                         {project.badgeAccent}
                       </span>
                     ) : null}
                   </p>
-                  <h3 className="mt-4 text-xl font-medium text-white">{project.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-stone-300/70">{project.text}</p>
+                  <h3 className="mt-4 text-xl font-medium text-[#2b2620]">{project.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[#2b2620]/70">{project.text}</p>
                 </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-8" id="what-we-do">
-          <h2 className="text-3xl font-semibold text-white">
-            First B day of the week, Room 2311
+        <section className="border-t border-[#2b2620]/15 py-8" id="what-we-do">
+          <h2 className="text-3xl font-semibold text-[#2b2620]">
+            First B day of the week, Room 1202
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-stone-300/70">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-[#2b2620]/70">
             Meetings vary — some weeks are a short lesson plus work time, some are full
             build sessions before a hackathon.
           </p>
-          <p className="mt-2 max-w-2xl text-base leading-7 text-stone-300/70">
+          <p className="mt-2 max-w-2xl text-base leading-7 text-[#2b2620]/70">
             To join, fill out the registration form, bring a laptop, and show up.
           </p>
           {/* TODO: confirm this is the registration form — currently the same
               Google Form the header and join section point at. */}
           <a
             href="https://forms.gle/mtzFw2yoVYfPp8aN8"
-            className="mt-6 inline-flex rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:bg-white/10"
+            className="mt-6 inline-flex rounded-[5px] bg-[#5b21b6] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#521ea4]"
           >
             Registration form
           </a>
         </section>
 
-        <section className="border-t border-white/10 py-12" id="roadmap">
-          <h2 className="max-w-3xl text-3xl font-semibold text-white">
+        <section className="border-t border-[#2b2620]/15 py-12" id="roadmap">
+          <h2 className="max-w-3xl text-3xl font-semibold text-[#2b2620]">
             From zero to your first hackathon in five lunches.
           </h2>
 
@@ -309,17 +309,17 @@ export default function Home() {
             {sessions.map((session) => (
               <li
                 key={session.week}
-                className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6"
+                className="rounded-[1.5rem] border border-[#2b2620]/15 bg-white/50 p-6"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-stone-400/70">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2b2620]/60">
                   {session.week}
                 </p>
-                <h3 className="mt-3 text-xl font-medium text-white">{session.title}</h3>
-                <p className="mt-3 max-w-3xl text-sm leading-7 text-stone-300/70">
+                <h3 className="mt-3 text-xl font-medium text-[#2b2620]">{session.title}</h3>
+                <p className="mt-3 max-w-3xl text-sm leading-7 text-[#2b2620]/70">
                   {session.text}
                 </p>
                 {session.highlight ? (
-                  <p className="mt-3 text-base font-medium leading-7 text-emerald-400">
+                  <p className="mt-3 text-base font-medium leading-7 text-[#5b21b6]">
                     {session.highlight}
                   </p>
                 ) : null}
@@ -328,14 +328,14 @@ export default function Home() {
           </ol>
         </section>
 
-        <section className="border-t border-white/10 py-12" id="hackathons">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-stone-400/70">
+        <section className="border-t border-[#2b2620]/15 py-12" id="hackathons">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2b2620]/60">
             WHERE WE GO
           </p>
-          <h2 className="mt-4 text-3xl font-semibold text-white">
+          <h2 className="mt-4 text-3xl font-semibold text-[#2b2620]">
             10 hackathons. We go together.
           </h2>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-stone-300/70">
+          <p className="mt-4 max-w-3xl text-base leading-7 text-[#2b2620]/70">
             We attend as a club — teams form at meetings, and nobody shows up alone.
           </p>
 
@@ -343,42 +343,42 @@ export default function Home() {
             {hackathons.map((event) => (
               <li
                 key={event.name}
-                className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6"
+                className="rounded-[1.5rem] border border-[#2b2620]/15 bg-white/50 p-6"
               >
-                <p className="text-lg font-medium text-white">{event.name}</p>
-                <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-7 text-stone-300/70">
+                <p className="text-lg font-medium text-[#2b2620]">{event.name}</p>
+                <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-7 text-[#2b2620]/70">
                   <span>{event.date}</span>
-                  <span aria-hidden="true" className="text-stone-500/70">·</span>
+                  <span aria-hidden="true" className="text-[#2b2620]/50">·</span>
                   <span>{event.format}</span>
-                  <span aria-hidden="true" className="text-stone-500/70">·</span>
+                  <span aria-hidden="true" className="text-[#2b2620]/50">·</span>
                   <span>{event.cost}</span>
                 </p>
               </li>
             ))}
           </ul>
 
-          <p className="mt-6 max-w-3xl text-sm leading-7 text-stone-400/70">
+          <p className="mt-6 max-w-3xl text-sm leading-7 text-[#2b2620]/60">
             *Dates marked with an asterisk are last season&apos;s. The 2026–27
             dates have not been announced yet and may move.
           </p>
-          <p className="mt-3 text-sm leading-7 text-stone-300/70">
+          <p className="mt-3 text-sm leading-7 text-[#2b2620]/70">
             Plus more announced through the year.
           </p>
         </section>
 
-        <section className="border-t border-white/10 py-12" id="officers">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-stone-400/70">
+        <section className="border-t border-[#2b2620]/15 py-12" id="officers">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2b2620]/60">
             OFFICERS
           </p>
-          <h2 className="mt-4 text-3xl font-semibold text-white">Who runs this.</h2>
+          <h2 className="mt-4 text-3xl font-semibold text-[#2b2620]">Who runs this.</h2>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             {officers.map((officer) => (
               <article
                 key={officer.name}
-                className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03]"
+                className="overflow-hidden rounded-[1.5rem] border border-[#2b2620]/15 bg-white/50"
               >
-                <div className="relative aspect-[4/5] w-full border-b border-white/10 bg-white/5">
+                <div className="relative aspect-[4/5] w-full border-b border-[#2b2620]/15 bg-white/50">
                   {officer.image ? (
                     <Image
                       src={officer.image}
@@ -391,7 +391,7 @@ export default function Home() {
                     <div className="flex h-full w-full items-center justify-center">
                       <span
                         aria-hidden="true"
-                        className="font-mono text-4xl font-semibold tracking-[0.2em] text-stone-500/70"
+                        className="font-mono text-4xl font-semibold tracking-[0.2em] text-[#2b2620]/50"
                       >
                         {officer.initials}
                       </span>
@@ -399,59 +399,59 @@ export default function Home() {
                   )}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-medium text-white">{officer.name}</h3>
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-stone-400/70">
+                  <h3 className="text-xl font-medium text-[#2b2620]">{officer.name}</h3>
+                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#2b2620]/60">
                     {officer.role}
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-stone-300/70">{officer.text}</p>
+                  <p className="mt-3 text-sm leading-7 text-[#2b2620]/70">{officer.text}</p>
                 </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="border-t border-white/10 py-12" id="faq">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-stone-400/70">
+        <section className="border-t border-[#2b2620]/15 py-12" id="faq">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2b2620]/60">
             QUESTIONS
           </p>
-          <h2 className="mt-4 text-3xl font-semibold text-white">Before you join.</h2>
+          <h2 className="mt-4 text-3xl font-semibold text-[#2b2620]">Before you join.</h2>
 
           <div className="mt-8 space-y-4">
             {faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6"
+                className="group rounded-[1.5rem] border border-[#2b2620]/15 bg-white/50 p-6"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-white [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-[#2b2620] [&::-webkit-details-marker]:hidden">
                   {faq.question}
                   <span
                     aria-hidden="true"
-                    className="font-mono text-xl leading-none text-emerald-400 transition-transform group-open:rotate-45"
+                    className="font-mono text-xl leading-none text-[#5b21b6] transition-transform group-open:rotate-45"
                   >
                     +
                   </span>
                 </summary>
-                <p className="mt-3 max-w-3xl text-sm leading-7 text-stone-300/70">{faq.answer}</p>
+                <p className="mt-3 max-w-3xl text-sm leading-7 text-[#2b2620]/70">{faq.answer}</p>
               </details>
             ))}
           </div>
         </section>
 
-        <section className="grid place-items-center gap-6 border-t border-white/10 py-12 lg:grid-cols-[1.05fr_0.95fr]" id="join">
-          <div className="mx-auto w-full max-w-2xl rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-stone-400/70"> JOIN US </p>
-            <h2 className="mt-4 text-3xl font-semibold text-white"> Join Hackademies and start building today. </h2>
-            <p className="mt-4 text-base leading-7 text-stone-300/70"> Hackademies is open to all students in the Academies of Loudoun. Whether you are a beginner or an experienced hacker, we welcome you to join our community and start building amazing projects together. </p>
+        <section className="grid place-items-center gap-6 border-t border-[#2b2620]/15 py-12 lg:grid-cols-[1.05fr_0.95fr]" id="join">
+          <div className="mx-auto w-full max-w-2xl rounded-[1.5rem] border border-[#2b2620]/15 bg-white/50 p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2b2620]/60"> JOIN US </p>
+            <h2 className="mt-4 text-3xl font-semibold text-[#2b2620]"> Join Hackademies and start building today. </h2>
+            <p className="mt-4 text-base leading-7 text-[#2b2620]/70"> Hackademies is open to all students in the Academies of Loudoun. Whether you are a beginner or an experienced hacker, we welcome you to join our community and start building amazing projects together. </p>
             <div className="flex items-center justify-center">
-              <a href="https://forms.gle/mtzFw2yoVYfPp8aN8" className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6 text-center text-lg font-semibold text-slate-100 transition-colors hover:bg-white/10"> Join the club </a>
+              <a href="https://forms.gle/mtzFw2yoVYfPp8aN8" className="rounded-[5px] bg-[#5b21b6] px-6 py-3 text-center text-lg font-semibold text-white transition-colors hover:bg-[#521ea4]"> Join the club </a>
             </div>
           </div>
         </section>
 
 
-        <footer className="mt-10 border-t border-white/10 py-6 text-sm text-stone-400/70 sm:flex sm:items-center sm:justify-between">
+        <footer className="mt-10 border-t border-[#2b2620]/15 py-6 text-sm text-[#2b2620]/60 sm:flex sm:items-center sm:justify-between">
           <p>Hackademies | Academies of Loudoun; Acskhat Tiwari. All rights reserved.</p>
-          <p>Contact: <a href="mailto:hackademies@gmail.com" className="text-stone-300/70 hover:text-stone-200">hackademies@gmail.com</a></p>
+          <p>Contact: <a href="mailto:hackademies@gmail.com" className="text-[#2b2620]/70 hover:text-[#5b21b6]">hackademies@gmail.com</a></p>
         </footer>
       </div>
     </main>
